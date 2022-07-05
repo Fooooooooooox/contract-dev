@@ -55,3 +55,21 @@ contract VerifySignature {
         }
     }
 }
+
+// how to interact?
+
+// first, call getMessageHash()
+// input address to, amount, message and nonce
+// and get your message hash 
+// hash = ""0xc436a49c822567dc28b41c5c698e4d36965ee4ce1545dbcc33ec981ee955e643""
+
+
+// then, you need to sign this massage with your private key, we use matemask to do this:
+// onpen javascript console:
+// ethereum.enable() ==> use metamask connect to remix 
+// hash = ""0xc436a49c822567dc28b41c5c698e4d36965ee4ce1545dbcc33ec981ee955e643
+// web3.personal.sign(hash, web3.eth.defaultAccount, console.log)
+// get the signature
+// input the signature into verify function
+
+// https://www.youtube.com/watch?v=NP4db_UPVwc
