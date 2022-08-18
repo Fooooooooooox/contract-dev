@@ -33,3 +33,14 @@ contract CharitySplitter {
 // 如果调用的时候传入的是receiver合约的地址，那么就会出现混乱：
 
 // 调用Charity 中定义的processDonation方法，但是问题是processDonation方法在receiver中并没有被定义，所以receiver的fallback函数就会被调用，虽然钱被转了，但是捐款的金额并没有得到处理。
+
+// web3js interact example
+// const goodCharity = await Charity.new();
+// const receiver = await Receiver.new();
+// const badCharity = await Charity.at(receiver.address);
+// const charitySplitter = await CharitySplitter.new();
+// // Charity.processDonation is executed successfully and 10 wei donation is recorded
+// await charitySplitter.donate(goodCharity, { value: 10 });
+// // Triggers the underlying Receiver fallback function
+// // 10 wei is acquired and ValueReceived event emitted 
+// await charitySplitter.donate(badCharity, { value: 10 });
