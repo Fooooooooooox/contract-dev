@@ -1,5 +1,5 @@
 pragma solidity ^0.5.0;
-
+// https://betterprogramming.pub/solidity-0-6-x-features-fallback-and-receive-functions-69895e3ffe#:~:text=receive%20plain%20Ether.-,receive(),send()%20or%20transfer()%20.
 // 这是一个charity合约 如果用这个合约地址来和CharitySplitter来交互接受捐款 是不会出现任何问题的。
 // 因为这个合约中正确定义了processDonation 方法（这个方法会在CharitySplitter中被调用）
 contract Charity {
