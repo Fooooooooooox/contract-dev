@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 // 定义了一个interface
 interface Solidity101 {
     function hello() external pure;
+
     function world(int) external pure;
 }
 

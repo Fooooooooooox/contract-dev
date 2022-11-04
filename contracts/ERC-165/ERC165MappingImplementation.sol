@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "./ERC165.sol";
+import './ERC165.sol';
 
 // 继承ERC165
 contract ERC165MappingImplementation is ERC165 {
@@ -22,5 +22,6 @@ contract ERC165MappingImplementation is ERC165 {
 
 interface Simpson {
     function is2D() external returns (bool);
+
     function skinColor() external returns (string memory);
 }

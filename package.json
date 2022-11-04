@@ -6,7 +6,10 @@
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write .",
-    "coverage": "hardhat coverage"
+    "coverage": "hardhat coverage",
+    "prepare": "husky install",
+    "solhint": "npx solhint -f table contracts/**/*.sol",
+    "prettier:solidity": "npx prettier --write contracts/**/*.sol"
   },
   "devDependencies": {
     "@chainlink/contracts": "^0.4.0",
@@ -19,13 +22,15 @@
     "dotenv": "^16.0.0",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.1",
-    "hardhat": "^2.9.1",
+    "hardhat": "^2.12.2",
     "hardhat-contract-sizer": "^2.4.0",
     "hardhat-deploy": "^0.9.29",
     "hardhat-gas-reporter": "^1.0.7",
-    "prettier": "^2.5.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
-    "solhint": "^3.3.6",
+    "solhint": "^3.3.7",
+    "solhint-plugin-prettier": "^0.0.5",
     "solidity-coverage": "^0.7.13"
   },
   "mocha": {

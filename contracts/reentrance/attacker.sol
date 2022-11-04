@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
-import "./reentrancy_vulnerability.sol";
+import './reentrancy_vulnerability.sol';
 
 contract Attack {
     //DepositFunds 是从要攻击合约中import来的类型
@@ -23,6 +23,4 @@ contract Attack {
         depositFunds.deposit{value: 1 ether}();
         depositFunds.withdraw();
     }
-
-
 }
